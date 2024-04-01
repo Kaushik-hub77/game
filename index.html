@@ -1,0 +1,25 @@
+<input id="guessednum">
+<p id="result">You are Right/Wrong</p>
+<button onclick="check()">check</button>
+
+
+<script>
+    var guessednum= document.getElementById("guessednum")
+    var result= document.getElementById("result")
+    var randomnum= Math.floor(Math.random()*10)+1
+    function check(){
+        var enterednum= guessednum.value
+        if(randomnum==enterednum)
+        {
+            console.log("right")
+            alert("You are Right")
+            result.textContent="Youre right"
+        }
+
+        else{
+            console.log("notright")
+             prompt(("You are Wrong"))
+        result.textContent="Youre wrong" 
+           }
+    }
+</script>
